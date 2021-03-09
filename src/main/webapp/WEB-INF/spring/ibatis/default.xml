@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+
+<beans>
+	<!-- PaginateInterceptor -->
+	<bean id="paginateInterceptor" class="net.sf.jlue.context.PaginateInterceptor">
+	</bean>
+	
+	<!-- Transaction manager for a single JDBC DataSource -->
+    <bean id="transactionManagerIbatis" 
+        class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    
+    <!-- SqlMap setup for iBATIS Database Layer -->
+    <bean id="sqlMapClient1" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+        <property name="configLocation">
+               <value>/WEB-INF/spring/ibatis/sql-map-config.xml</value>
+           </property>
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    
+    <bean id="sqlMapClient"
+		class="net.sf.jlue.persistence.ibatis.SpringForIbatis2Dao">
+		<description>Ibatis DAO Template</description>
+		<property name="sqlMapClient">
+			<ref local="sqlMapClient1" />
+		</property>
+	</bean>
+	<!-- beans configuration ... -->
+</beans>

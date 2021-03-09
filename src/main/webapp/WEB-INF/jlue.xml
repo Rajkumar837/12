@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jlue version="1.0">
+	
+	<parameters>
+		<parameter>
+			<name>contextBean</name>
+			<value>net.sf.jlue.context.DefaultContext</value>
+		</parameter>
+		<parameter>
+			<name>jaasLogin</name>
+			<value>jlue4xml</value>
+		</parameter>
+		<parameter>
+			<name>errorResourceBundle</name>
+			<value>errorResources</value>
+		</parameter>
+		<parameter>
+			<name>pageSize</name>
+			<value>15</value>
+		</parameter>
+	</parameters>
+	
+	<initializers>
+		<initializer>
+			<name>springPreLoader</name>
+			<class>net.sf.jlue.context.SpringInitializer</class>
+			<load-on-startup>-1</load-on-startup>
+			<description>preload spring context.</description>
+		</initializer>
+	</initializers>
+
+	<interceptor>
+		<!--advice id="ViewRequestContentAdvice" type="net.sf.jlue.aop.support.ViewRequestContentAdvice">
+			<patterns>
+				<list>
+					<value>.*File1234$</value>
+				</list>
+			</patterns>
+		</advice>
+		<advice id="actionSecurity" type="net.sf.jlue.aop.support.SecurityAdvice">
+			<patterns>
+				<list>
+					<value>.*[^l][^o][^g][^i][^n]$</value>
+				</list>
+			</patterns>
+		</advice-->
+	</interceptor>
+
+</jlue>

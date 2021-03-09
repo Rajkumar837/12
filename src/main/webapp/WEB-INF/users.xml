@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+  	<user id='admin' name='admin' explain='admin' password='admin' roles='admin,dep'>
+  		<set-property property='dept' value='tech'/>
+  	</user>
+  	<user id='test' name='tester' explain='tester' password='test' roles='test,dep'>
+  		<set-property property='dept' value='tech'/>
+  	</user>
+</users>

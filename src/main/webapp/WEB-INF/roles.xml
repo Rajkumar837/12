@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<roles>
+ 	<role id='admin' name='admin' explain='admin'>
+ 		<set-property  property="nn" value="ss"/>
+ 		<set-property  property="ndn" value="ss"/>
+ 		<actions>
+ 			<action id='d' name='a' explain='d'/>
+ 			<action id="create" name="create" explain="dd"/>
+ 		</actions>
+ 	</role>
+</roles>

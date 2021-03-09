@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<display-name>application name</display-name>
+	<description>application description.</description>
+
+	<form-beans>
+		<form-bean name="helloworldForm" type="rk.com.forms.HelloWorldForm"></form-bean>
+	</form-beans>
+
+	<global-exceptions>
+		<exception key="jlue.error.security" path="/commons/security.jsp"
+			type="net.sf.jlue.exception.AccessException"
+			handler="net.sf.jlue.struts.ExceptionExtHandler">
+		</exception>
+		<exception key="jlue.errors.general" path="/commons/unKnownError.jsp"
+			type="java.lang.Exception"
+			handler="net.sf.jlue.struts.ExceptionExtHandler">
+		</exception>
+		<exception key="jlue.errors" path="/commons/error.jsp"
+			type="net.sf.jlue.exception.BaseException"
+			handler="net.sf.jlue.struts.ExceptionExtHandler">
+		</exception>
+	</global-exceptions>
+
+	<global-forwards>
+		<forward name="failure" path="/commons/error.jsp" />
+	</global-forwards>
+
+	<action-mappings>
+		<action path="/hello"
+			name="helloworldForm"
+			parameter="index"
+			type="rk.com.actions.HelloWorldAction">
+			<description>Into hello</description>
+			<forward name="success" path="/templates/hello.jsp" />
+		</action>
+		<action path="/index"
+			name="helloworldForm"
+			type="rk.com.actions.HelloWorldAction">
+			<description>Into hello</description>
+			<forward name="success" path="/templates/hello.jsp" />
+		</action>
+		<action path="/new"
+			name="helloworldForm"
+			parameter="neu"
+			type="rk.com.actions.HelloWorldAction">
+			<description>Into hello</description>
+			<forward name="success" path="/templates/hello.jsp" />
+		</action>
+	</action-mappings>
+	
+	<controller maxFileSize="15M" inputForward="true"
+		contentType="text/html; charset=UTF-8" locale="true"
+		processorClass="net.sf.jlue.struts.RequestProcessor">
+	</controller>
+	
+	<message-resources parameter="/messages" />
+
+</struts-config>

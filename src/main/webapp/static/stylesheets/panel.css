@@ -1,0 +1,144 @@
+/*--popup*/
+.popup {
+	margin:0px;
+	color: blue;
+	background-color: #fff;
+	border: 2px solid #FFC86A;
+	font-size: 13px;
+	padding:0px;
+	overflow:auto;
+}
+.popup ul {
+	padding:2px 5px;
+	margin:0px;
+}
+.popup ul ul {
+	padding:2px 10px;
+	margin:0px;
+}
+
+/** menu list */
+.menul{
+	/*border: #516D86 solid 1px;*/
+	margin: 2px;
+	padding: 0px;
+}
+
+.menul ul, .menul ul ul {
+	margin: 0px;
+	padding: 2px 0px 2px 2px;
+	line-height:1 ; /* IE6 */
+}
+
+.menul li {
+	list-style-type: none;
+	list-style-image: none;
+	margin:1px 0px 1px 1px;
+	padding:2px 0px 2px 5px;
+}
+
+.menul li a ,.around a, .menul li span {
+	margin:0px;
+	padding: 2px 0px 2px 5px;
+	display: block;
+	text-decoration: none !important; /*IE6 needs important*/
+	font-size: 105%;
+	font-weight: bold;
+	border: 1px solid #EEE8DD;
+}
+
+.menul li a:hover, .menul li span:hover{
+	border-color: #516D86;
+	color: #50470D;
+	border: 1px solid #E3D165;
+}
+
+.menul li a span{
+	padding: 0px 8px 0px 13px;
+}
+
+.menul li a img{
+	margin-right: 5px;
+}
+
+/*------tree---*/
+.tree {
+    /*border: #516D86 solid 1px;*/
+}
+
+.tree, .tree ul {
+	list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1; /* IE6 */
+}
+
+.tree ul ul{
+	list-style: none;
+	margin: 0px 0px 0px 10px;
+	padding: 2px 0px 2px 2px;
+	line-height:1 ; /* IE6 */
+}
+.tree li {
+    list-style-type: none;
+	list-style-image: none;
+	margin:1px 0px 1px 1px;
+	padding:2px 0px 2px 0px;
+	font-weight: bold;
+}
+
+.tree li a{
+	padding:2px;
+}
+
+.tree .default a{
+	color: black;
+	border: 1px solid #EEE8DD;
+}
+
+.tree .disabled a{
+	color: #ACA899;
+}
+
+.tree .selected a{
+	color: blue;
+	border: 1px solid blue;
+}
+
+.tree .hovered a{
+	border-color: #516D86;
+	color: #50470D;
+	border: 2px solid #E3D165;
+}
+
+.tree li img {
+	margin-left:5px;
+	vertical-align:middle;
+}
+
+div.lightRed {
+	background-color:#FFB0AC;
+	margin-top:5px;
+	visibility  :inherit ;
+}
+div.lightRed .panel {
+	background-color:#FECFCB;
+	margin-left:2px;
+	margin-right:2px;
+	overflow:auto;
+}
+
+div.lightGreen {
+	background-color:#84B8ED;
+	padding:0px;
+}
+div.lightGreen .panel {
+	background-color:white;/*#B5EDBC*/
+	padding:0px;
+}
+
+.titleBar {
+	font-size:14px;
+	font-weight: bold;
+	background-image:url(/images/panel/thbg.png);
+}

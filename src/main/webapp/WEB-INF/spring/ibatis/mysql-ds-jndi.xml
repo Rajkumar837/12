@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+
+<beans>
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean"
+		singleton="true">
+		<description>in tomcat java:/comp/env/*DS</description>
+		<property name="jndiName">
+			<value>jdbc/oss</value>
+		</property>
+	</bean>
+	
+	<import resource="default.xml" />
+</beans>
